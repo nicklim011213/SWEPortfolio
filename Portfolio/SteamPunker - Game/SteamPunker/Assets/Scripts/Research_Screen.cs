@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// This code is unused
+
 public class Research_Screen : MonoBehaviour {
     public bool ResearchScreenToggle;
     public Button Toggle;
@@ -12,9 +14,9 @@ public class Research_Screen : MonoBehaviour {
     void Start()
     {
     ResearchScreenToggle = false;
-    Toggle = this.GetComponent<Button>();
-    Toggle.onClick.AddListener(SwapState);
-    ResearchOverlay = GameObject.Find("Research").transform.GetChild(0).gameObject;
+    Toggle = this.GetComponent<Button>();       // Create a toggle bool and attach it to button
+    Toggle.onClick.AddListener(SwapState);      // If clicked 
+    ResearchOverlay = GameObject.Find("Research").transform.GetChild(0).gameObject; // define the actual screen
     }
 
     // Update is called once per frame
@@ -26,13 +28,13 @@ public class Research_Screen : MonoBehaviour {
     void SwapState()
     {
         ResearchScreenToggle = !ResearchScreenToggle;
-        if (ResearchScreenToggle == false)
+        if (ResearchScreenToggle == false) // if bool is off
         {
-            ResearchOverlay.SetActive(false);
+            ResearchOverlay.SetActive(false); // screen is off
         }
         else
         {
-            ResearchOverlay.SetActive(true);
+            ResearchOverlay.SetActive(true); // otherwise on
         }
     }
 }
