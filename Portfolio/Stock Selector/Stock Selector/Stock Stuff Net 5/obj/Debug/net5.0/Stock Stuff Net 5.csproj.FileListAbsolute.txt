@@ -1,0 +1,19 @@
+C:\Users\Nick\Desktop\Stock Bot\Stock Stuff Net 5\Stock Stuff Net 5\bin\Debug\net5.0\Stock Stuff Net 5.exe
+C:\Users\Nick\Desktop\Stock Bot\Stock Stuff Net 5\Stock Stuff Net 5\bin\Debug\net5.0\Stock Stuff Net 5.deps.json
+C:\Users\Nick\Desktop\Stock Bot\Stock Stuff Net 5\Stock Stuff Net 5\bin\Debug\net5.0\Stock Stuff Net 5.runtimeconfig.json
+C:\Users\Nick\Desktop\Stock Bot\Stock Stuff Net 5\Stock Stuff Net 5\bin\Debug\net5.0\Stock Stuff Net 5.runtimeconfig.dev.json
+C:\Users\Nick\Desktop\Stock Bot\Stock Stuff Net 5\Stock Stuff Net 5\bin\Debug\net5.0\Stock Stuff Net 5.dll
+C:\Users\Nick\Desktop\Stock Bot\Stock Stuff Net 5\Stock Stuff Net 5\bin\Debug\net5.0\Stock Stuff Net 5.pdb
+C:\Users\Nick\Desktop\Stock Bot\Stock Stuff Net 5\Stock Stuff Net 5\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Nick\Desktop\Stock Bot\Stock Stuff Net 5\Stock Stuff Net 5\bin\Debug\net5.0\Skender.Stock.Indicators.dll
+C:\Users\Nick\Desktop\Stock Bot\Stock Stuff Net 5\Stock Stuff Net 5\obj\Debug\net5.0\Stock Stuff Net 5.csproj.AssemblyReference.cache
+C:\Users\Nick\Desktop\Stock Bot\Stock Stuff Net 5\Stock Stuff Net 5\obj\Debug\net5.0\Stock Stuff Net 5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nick\Desktop\Stock Bot\Stock Stuff Net 5\Stock Stuff Net 5\obj\Debug\net5.0\Stock Stuff Net 5.AssemblyInfoInputs.cache
+C:\Users\Nick\Desktop\Stock Bot\Stock Stuff Net 5\Stock Stuff Net 5\obj\Debug\net5.0\Stock Stuff Net 5.AssemblyInfo.cs
+C:\Users\Nick\Desktop\Stock Bot\Stock Stuff Net 5\Stock Stuff Net 5\obj\Debug\net5.0\Stock Stuff Net 5.csproj.CoreCompileInputs.cache
+C:\Users\Nick\Desktop\Stock Bot\Stock Stuff Net 5\Stock Stuff Net 5\obj\Debug\net5.0\Stock Stuff Net 5.csproj.CopyComplete
+C:\Users\Nick\Desktop\Stock Bot\Stock Stuff Net 5\Stock Stuff Net 5\obj\Debug\net5.0\Stock Stuff Net 5.dll
+C:\Users\Nick\Desktop\Stock Bot\Stock Stuff Net 5\Stock Stuff Net 5\obj\Debug\net5.0\refint\Stock Stuff Net 5.dll
+C:\Users\Nick\Desktop\Stock Bot\Stock Stuff Net 5\Stock Stuff Net 5\obj\Debug\net5.0\Stock Stuff Net 5.pdb
+C:\Users\Nick\Desktop\Stock Bot\Stock Stuff Net 5\Stock Stuff Net 5\obj\Debug\net5.0\Stock Stuff Net 5.genruntimeconfig.cache
+C:\Users\Nick\Desktop\Stock Bot\Stock Stuff Net 5\Stock Stuff Net 5\obj\Debug\net5.0\ref\Stock Stuff Net 5.dll
