@@ -14,7 +14,7 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W))        // Move Camera Up down left or right based on wasd layout
         {
             Camera.transform.position += Vector3.up * 10.0f * Time.deltaTime;
         }
