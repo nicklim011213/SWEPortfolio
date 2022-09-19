@@ -21,8 +21,8 @@ public class SpawnHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dropdown = GameObject.Find("Canvas");
-        StatusCode = false;
+        dropdown = GameObject.Find("Canvas");           // dropdown select menu is declared along with status which displays if you are placing object alert 
+        StatusCode = false;                             // which is the status alert dropdown value which is the selected object and Dot which is a cursor.
         alert = GameObject.Find("Alert");
         dropdownvalue = GameObject.Find("Canvas").transform.GetChild(0).GetComponent<Dropdown>();
         Dot = GameObject.Find("Dot");
@@ -31,25 +31,25 @@ public class SpawnHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))               // Toggles status code message when hitting esc
         {
             StatusCode = !StatusCode;
-        }
+        }                                           
 
         CursorLoc = GameObject.Find("Dot").transform.position;
 
-        if (StatusCode)
+        if (StatusCode)                                     // If status code is on
         {
             alert.SetActive(false);
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse0))           // if click
             {
-                selection = GetSelection(dropdownvalue);
-                Object.Instantiate(selection, CursorLoc, Rotate, Parent);
+                selection = GetSelection(dropdownvalue);    // Get select from dropdown
+                Object.Instantiate(selection, CursorLoc, Rotate, Parent);   // create new object at cursor that is selection.
             }
             else if (Input.GetKeyDown(KeyCode.Mouse1))
             {
-                Debug.Log("Snap Cursor");
-                if ((Dot.transform.position.x % 1) >= 0.5)
+                Debug.Log("Snap Cursor");                   // if right click
+                if ((Dot.transform.position.x % 1) >= 0.5)  // This code blocks just snap a cursor into place. Auto align tool
                 {
                     if ((Dot.transform.position.y % 1) >= 0.5)
                         {
@@ -85,7 +85,7 @@ public class SpawnHandler : MonoBehaviour
 
 
     GameObject GetSelection(Dropdown dropdown)
-    {
+    {                                                   // Index of each object on the dropdown that you want to create
         GameObject selection;
         if (dropdown.value == 0)
         {
