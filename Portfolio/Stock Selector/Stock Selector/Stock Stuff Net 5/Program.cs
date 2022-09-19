@@ -87,9 +87,13 @@ namespace Stock_Stuff
                                     }
                                     line++;
                                 }
+                                
+                                
                                 // Finds first / in line somewhere
                                 Search.Close();
                                 String Comparision = "";
+                                
+                                
                                 System.IO.StreamReader Search2 = new System.IO.StreamReader(@"C:\Users\Nick\Desktop\Stock Bot\Stock stuff Net 5\" + Indicator + ".txt");
                                 for (int i = 0; i < line + 1; i++)
                                 {
@@ -97,6 +101,8 @@ namespace Stock_Stuff
                                 }
                                 Search2.Close(); // searches response for /
                                 System.Console.WriteLine("New Data Found");
+                                
+                                
                                 // Finds the / in the response
                                 string[] NewAndOld = JSONDATA.Split(Comparision); // splits into new and old data
                                 String OldFile = File.ReadAllText(@"C:\Users\Nick\Desktop\Stock Bot\Stock stuff Net 5\" + Indicator + ".txt"); // old file is coppied
@@ -166,11 +172,16 @@ namespace Stock_Stuff
             {
                 using (WebClient client = new WebClient())
                 {
+                    
+                    
                     String URLPt1 = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=";
                     String URlPt2 = Ind + "&apikey=~~~";
                     String CompleteURl = URLPt1 + URlPt2;
                     Uri queryUri = new Uri(CompleteURl);
                     String JSONDATA = client.DownloadString(queryUri);
+                    //2 URl Parts where he Symbol is put inside the URl
+                    // This is just the url for the API call
+                    
                     if (File.Exists(@"C:\Users\Nick\Desktop\Stock Bot\Stock stuff Net 5\" + Ind + ".txt")) // If the file exdists name = Symbol then write
                     {
                         // If the file exists
@@ -184,6 +195,7 @@ namespace Stock_Stuff
                         JSONDATA = JSONDATA.Replace("*", "");  // Remove Star
                         JSONDATA = JSONDATA.Replace('-', '/'); // Replace - With /
 
+                        
                         System.DateTime Time = new System.DateTime();
                         System.DateTime Time2 = new System.DateTime();
                         System.DateTime Time3 = new System.DateTime();
@@ -202,10 +214,13 @@ namespace Stock_Stuff
                         JSONDATA = JSONDATA.Replace("5. Time Zone: US/Eastern", "");
                         // This cleans the response from the api of any data we dont need
 
+                        
                         int refreshedline = JSONDATA.IndexOf("3.");
                         JSONDATA = JSONDATA.Remove(refreshedline, 29);
                         // Removes Extra Info String 
                         // Fix the double Space when updating
+                        
+                        
                         {
                             String Date = Time.Year + "-" + Time.Month.ToString("00") + "-" + Time.Day.ToString("00");
                             // Find first -
@@ -222,12 +237,15 @@ namespace Stock_Stuff
                             } // go to that line and make it a / rather than -
                             Search.Close();
                             String Comparision = "";
+                            
+                            
                             System.IO.StreamReader Search2 = new System.IO.StreamReader(@"C:\Users\Nick\Desktop\Stock Bot\Stock stuff Net 5\" + Ind + ".txt");
                             for (int i = 0; i < line + 1; i++)
                             {
                                 Comparision = Search2.ReadLine();
                             }
                             Search2.Close();
+                            
                             
                             // If new data is found take the response and split it based on what the newest day is in file
                             System.Console.WriteLine("New Data Found:");
@@ -254,6 +272,7 @@ namespace Stock_Stuff
                                 // If blank no new data is found
                             }
 
+                            
                             File.WriteAllText(@"C:\Users\Nick\Desktop\Stock Bot\Stock stuff Net 5\" + Ind + ".txt", Final);
                             String[] PreRemvoal = File.ReadAllLines(@"C:\Users\Nick\Desktop\Stock Bot\Stock stuff Net 5\" + Ind + ".txt");
                             //File.WriteAllLines(@"C:\Users\Nick\Desktop\Stock Bot\Stock stuff Net 5\" + Ind + ".txt", PreRemvoal.Skip(8).ToArray());
@@ -265,6 +284,7 @@ namespace Stock_Stuff
                         Console.WriteLine("Creating and writing to file...");
                         File.Create(@"C:\Users\Nick\Desktop\Stock Bot\Stock stuff Net 5\" + Ind + ".txt").Dispose();  // Create File
 
+                        
                         JSONDATA = JSONDATA.Replace("{", "");  // Remove {
                         JSONDATA = JSONDATA.Replace("}", "");  // Remove }
                         JSONDATA = JSONDATA.Replace(",", "");  // Remove ,
@@ -292,6 +312,7 @@ namespace Stock_Stuff
                         JSONDATA = JSONDATA.Replace("5. Time Zone: US/Eastern", "");
                         // Removes Extra Info String 
 
+                        
                         int refreshedline = JSONDATA.IndexOf("3.");
                         JSONDATA = JSONDATA.Remove(refreshedline, 29);
 
@@ -323,6 +344,8 @@ namespace Stock_Stuff
             int ScoreArrayItter = 0; // Itterator for for loops
             bool NeuTrade = false;  // Determines if buying with 0 score should be done
             Console.WriteLine("Do you want to trade on score 0 (50% of value of score 1) T for true anything else for false");
+            
+            
             if (Console.ReadLine().ToUpper() == "T")
             {
                 NeuTrade = true;
