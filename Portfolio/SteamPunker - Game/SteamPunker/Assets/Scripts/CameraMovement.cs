@@ -8,7 +8,7 @@ public class CameraMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Camera = GameObject.Find(("Dot"));
+        Camera = GameObject.Find(("Dot")); //Find object called dot make it camera
     }
 
     // Update is called once per frame
